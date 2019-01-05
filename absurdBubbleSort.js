@@ -1,3 +1,5 @@
+const readline = require("readline");
+
 const reader = readline.createInterface({
   input: process.stdin,
   output: process.stdout
@@ -39,9 +41,7 @@ function innerBubbleSortLoop(arr, i, madeAnySwaps, outerBubbleSortLoop) {
       madeAnySwaps = true;
     }
 
-    innerBubbleSortLoop(
-      arr, i + 1, madeAnySwaps, outerBubbleSortLoop
-    );
+    innerBubbleSortLoop(arr, i + 1, madeAnySwaps, outerBubbleSortLoop);
   });
 }
 
